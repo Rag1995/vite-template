@@ -4,6 +4,7 @@ import { defineConfig } from 'vite'
 import VueRouter from 'vue-router/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -29,6 +30,7 @@ export default defineConfig({
       dts: 'src/vue-components.d.ts',
       dirs: ['src/components'],
     }),
+    tailwindcss(),
   ],
   resolve: {
     alias: {
