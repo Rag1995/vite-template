@@ -1,10 +1,11 @@
 import js from '@eslint/js'
+import { defineConfig } from 'eslint/config'
 import prettierRecommended from 'eslint-plugin-prettier/recommended'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import vue from 'eslint-plugin-vue'
 import tseslint from 'typescript-eslint'
 
-export default tseslint.config(
+export default defineConfig(
   { ignores: ['dist', 'node_modules'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
